@@ -1,0 +1,180 @@
+@charset "PT-BR";
+/* Importa a Bebas Neue regular */
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue-Regular.otf') format(opentype),
+    url('fonts/BebasNeue-Regular.ttf') format(truetype);
+}
+
+/* Impota a Open Sans Italica */
+@font-face {
+    font-family: 'Open Sans Italic';
+    src: url(fonts/OpenSans-Italic.ttf) format(truetype);
+    font-style: italic;
+}
+
+/* Importa a Open Sans Regular */
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/OpenSans-Regular.ttf) format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Tangerine */
+@font-face {
+    font-family: 'Tangerine';
+    src: url(fonts/Tangerine-Regular.ttf);
+    font-weight: normal; font-style: normal;
+}
+
+/* Inconsolata Bold */
+@font-face {
+    font-family: 'Inconsolata Bold';
+    src: url(fonts/Inconsolata-Bold.ttf);
+    font-weight: bold; font-style: normal;
+}
+
+/* Inconsolata Lighter */
+@font-face {
+    font-family: 'Inconsolata Lighter';
+    src: url(fonts/Inconsolata-Light.ttf);
+    font-weight: lighter; font-style: normal;
+}
+
+:root {
+    --cor0: #375B75;
+    --cor1: #217FC2;
+    --cor2: #144D75;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CORPO DA PAGINA */
+body {
+    margin: 0px;
+    text-align: justify;
+    min-width: 600px;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+p {
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 20%;
+}
+
+h2 {
+    font: bold 1.5em 'Inconsolata Bold';
+    color: var(--cor1);
+}
+
+/* CABEÇARIO */
+header {
+    background-color: #375B75;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.39);text-align: center;
+}
+
+header > nav {
+    padding: 10px 0px;
+}
+
+nav > a {
+    transition-duration: 0.5s;
+}
+
+a:hover {
+    background-color: rgb(48, 48, 48);
+    text-decoration: underline;
+}
+
+.btn_menu {
+    text-decoration: none;
+    color: white;
+    font: lighter 18px 'Inconsolata Lighter';
+
+    margin: 10px 10px;
+    padding: 10px 20px;
+}
+
+/* CORPO PRINCIPAL */
+main {
+    padding-left: 50px;
+    max-width: 1000px;
+}
+
+#title-section {
+    margin-bottom: 30px;
+}
+
+#nome {
+    display: inline-block;
+    padding: 0px 0px 0px 25px;
+    width: 480px;
+    font: 10em 'Bebas Neue';
+    margin: 0px;
+    color: #217FC2;
+}
+
+#FotoPerfil {
+    border-radius: 50%;
+    margin: 20px 0px 40px 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.514);
+}
+
+#sobreMim > h2 {
+    padding-top: 30px;
+}
+
+#competencias {
+    padding-top: 30px;
+}
+
+#meusProjetos {
+    padding: 30px 0px;
+}
+
+#meusProjetos > a {
+    display: inline-block;
+    background-color: #144D75;
+
+    font: 700 1.5em 'Open Sans';
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+    border: 0px solid transparent;
+    border-radius: 10px;
+    padding: 100px;
+    margin: 20px 10px;
+
+    transition-duration: 0.4s;
+}
+
+#meusProjetos > a:hover {
+    background-color: rgb(184, 176, 176);
+}
+
+/* RODAPÉ */
+footer {
+    padding: 5px 0px 5px 15px;
+    background-color: #375B75;
+    position: fixed;
+    height: 100px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+footer > p {
+    color: white;
+    font: 200 12px 'Open Sans';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 0px;
+}
