@@ -116,12 +116,13 @@ main > p {
     margin-bottom: 30px;
 }
 
-#Nome-Foto {
+#caixa-foto {
+    display: inline-block;
     padding-top: 50px;
 }
 
 #nome {
-    display: inline-block;
+    display: inline;
     width: 480px;
     font: 10em 'Bebas Neue';
     margin: 0px;
