@@ -1,19 +1,19 @@
 @charset "PT-BR";
-/* Importa a Bebas Neue regular */
+/* Bebas Neue regular */
 @font-face {
     font-family: 'Bebas Neue';
     src: url('fonts/BebasNeue-Regular.otf') format(opentype),
     url('fonts/BebasNeue-Regular.ttf') format(truetype);
 }
 
-/* Impota a Open Sans Italica */
+/* Open Sans Italica */
 @font-face {
     font-family: 'Open Sans Italic';
     src: url(fonts/OpenSans-Italic.ttf) format(truetype);
     font-style: italic;
 }
 
-/* Importa a Open Sans Regular */
+/* Open Sans Regular */
 @font-face {
     font-family: 'Open Sans';
     src: url(fonts/OpenSans-Regular.ttf) format(truetype);
@@ -42,6 +42,13 @@
     font-weight: lighter; font-style: normal;
 }
 
+/* Inconsolata Regular */
+@font-face {
+    font-family: 'Inconsolata Regular';
+    src: url(fonts/Inconsolata-Regular.ttf);
+    font-weight: 400; font-style: normal;
+}
+
 :root {
     --cor0: #375B75;
     --cor1: #217FC2;
@@ -49,10 +56,10 @@
 
 }
 
-/** {
+*{
     margin: 0px;
     padding: 0px;
-}*/
+}
 
 /* CORPO DA PAGINA */
 body {
