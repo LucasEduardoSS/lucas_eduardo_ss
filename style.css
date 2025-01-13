@@ -71,7 +71,7 @@ body {
 /* CONFIGURAÇÕES GERAIS */
 p {
     font-size: large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inconsolata Regular', Tahoma, Geneva, Verdana, sans-serif;
     margin-right: 20%;
 }
 
@@ -82,6 +82,9 @@ h2 {
 
 /* CABEÇAlHO */
 header {
+    display: inline-block;
+    
+    height: 500px;
     background-color: #375B75;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.39);text-align: center;
 }
@@ -110,6 +113,7 @@ a:hover {
 
 /* CORPO PRINCIPAL */
 main {
+    display: inline-block;
     padding-left: 50px;
     max-width: 1000px;
 }
@@ -130,15 +134,15 @@ main {
 #nome-lucas {
     width: 480px;
     margin: 50px 0 0 0;
-    font: 7em 'Bebas Neue';
-    color: #217FC2;
+    font: 2em 'Inconsolata Bold';
+    color: black;
 }
 
 #nome-eduardo {
     width: 480px;
-    margin: -30px 0 0 0;
-    font: 7em 'Bebas Neue';
-    color: #217FC2;
+    margin: 0;
+    font: 2em 'Inconsolata Bold';
+    color: black;
 }
 
 #FotoPerfil {
