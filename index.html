@@ -1,34 +1,140 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
-    <title>Lucas Eduardo</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html" class="btn_menu">Início</a></li>
-                <li><a href="sobreMim.html" class="btn_menu">Sobre Mim</a></li>
-                <li><a href="competencias.html" class="btn_menu">Competências</a></li>
-                <li><a href="meusProjetos.html" class="btn_menu">Meus Projetos</a></li>
+            <div class="logo">&lt;/Dev&gt;</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="flex-container">
-            <article id="caixa-foto">
-                <img id='FotoPerfil' src="images/Foto Perfil 400.jpg" alt="Foto de Perfil" width="100%">
-            </article>
-            <article>
-                <h1 id="nome-lucas">Lucas</h1>
-                <h1 id="nome-eduardo">Eduardo</h1>
-                <p id="bio">Técnico em Edificações pela escola técnica SENAI-CETEC e estudante no 8° período de Engenharia da Computação na Universidade Internacional UNINTER. Aberto a oportunidades de estágio em desenvolvimento de hardware ou software visando crescimento pessoal e profissional.</p>
-            </article>
-        </section>
-    </main>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Desenvolvedor <span class="gradient-text">Full-Stack</span></h1>
+                <p>Especializado em Python e Object Pascal, transformando ideias em soluções digitais robustas e escaláveis. Da infraestrutura ao front-end, construindo experiências completas.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                    <a href="#contact" class="btn btn-secondary">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Tecnologias & <span class="gradient-text">Habilidades</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Django, Flask, FastAPI, NumPy, Pandas. Desenvolvimento de APIs robustas e aplicações web escaláveis com foco em performance.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔷</div>
+                    <h3>Object Pascal</h3>
+                    <p>Delphi, Lazarus, FireDAC. Experiência em desenvolvimento desktop e sistemas legados com alta performance e confiabilidade.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💾</div>
+                    <h3>Databases</h3>
+                    <p>PostgreSQL, MySQL, MongoDB, Redis. Modelagem de dados, otimização de queries e gestão de bancos relacionais e NoSQL.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Front-End</h3>
+                    <p>HTML5, CSS3, JavaScript, React. Interfaces modernas e responsivas com foco na experiência do usuário.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>DevOps</h3>
+                    <p>Docker, Git, CI/CD, Linux. Automação de deploy, containerização e gestão de infraestrutura.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔐</div>
+                    <h3>APIs & Security</h3>
+                    <p>REST, GraphQL, OAuth, JWT. Desenvolvimento seguro com autenticação e autorização robustas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projetos em <span class="gradient-text">Destaque</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🚀</div>
+                    <div class="project-content">
+                        <h3>Sistema ERP Completo</h3>
+                        <p>Plataforma empresarial desenvolvida em Python (Django) com integração desktop em Delphi para processos críticos.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Delphi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📊</div>
+                    <div class="project-content">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Sistema de análise de dados em tempo real com visualizações interativas e processamento de grandes volumes.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🏪</div>
+                    <div class="project-content">
+                        <h3>PDV Inteligente</h3>
+                        <p>Sistema de ponto de venda desktop com sincronização cloud, desenvolvido em Object Pascal com backend Python.</p>
+                        <div class="project-tags">
+                            <span class="tag">Delphi</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact">
+                <h2>Vamos Trabalhar <span class="gradient-text">Juntos?</span></h2>
+                <p>Estou disponível para novos projetos e oportunidades. Entre em contato!</p>
+                <a href="mailto:contato@email.com" class="btn btn-primary">Enviar Mensagem</a>
+                <div class="social-links">
+                    <a href="#" title="GitHub">⚡</a>
+                    <a href="#" title="LinkedIn">💼</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="Email">📧</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Full-Stack Developer. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
