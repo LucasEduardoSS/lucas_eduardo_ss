@@ -41,6 +41,7 @@ nav {
     font-size: 24px;
     font-weight: bold;
     background: linear-gradient(45deg, #05F26C, #03A64A);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -110,6 +111,7 @@ nav {
 
 .gradient-text {
     background: linear-gradient(45deg, #05F26C, #03A64A, #0A5926);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradient 3s ease infinite;
