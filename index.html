@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
+    <title>Portfólio - Full-Stack Developer</title>
 </head>
 <body>
     <header>
@@ -119,10 +119,53 @@
 
     <section id="contact" class="section">
         <div class="container">
+            <h2 class="section-title">Hobbies & <span class="gradient-text">Interesses</span></h2>
+            <div class="hobbies-section">
+                <div class="hobby-buttons">
+                    <button class="hobby-btn active" data-hobby="cad">CAD & BIM</button>
+                    <button class="hobby-btn" data-hobby="woodwork">Marcenaria CNC</button>
+                    <button class="hobby-btn" data-hobby="vector">Design Vetorial</button>
+                    <button class="hobby-btn" data-hobby="circuit">Circuitos</button>
+                </div>
+
+                <div class="hobby-content">
+                    <div class="hobby-description active" data-content="cad">
+                        <h3>Projetos CAD & BIM</h3>
+                        <p>Desenvolvo projetos arquitetônicos utilizando softwares de CAD e BIM, criando modelos 3D detalhados de casas e construções. Essa paixão combina criatividade com precisão técnica, permitindo visualizar e planejar cada detalhe antes da execução, desde a estrutura até os acabamentos finais.</p>
+                    </div>
+
+                    <div class="hobby-description" data-content="woodwork">
+                        <h3>Marcenaria com CNC</h3>
+                        <p>Projeto e executo peças de marcenaria utilizando máquinas router e CNC Fabex. Do design digital à produção física, transformo ideias em móveis e objetos de madeira com precisão milimétrica. É fascinante ver como a programação e a carpintaria se unem para criar peças únicas.</p>
+                    </div>
+
+                    <div class="hobby-description" data-content="vector">
+                        <h3>Ilustração Vetorial</h3>
+                        <p>Crio ilustrações e designs vetoriais usando o Inkscape, desde logos até ilustrações complexas. A arte vetorial permite escalabilidade infinita e precisão matemática, perfeita para projetos que exigem versatilidade e qualidade profissional em qualquer tamanho.</p>
+                    </div>
+
+                    <div class="hobby-description" data-content="circuit">
+                        <h3>Simulação de Circuitos</h3>
+                        <p>Projeto e simulo circuitos eletrônicos com o SimulIDE, testando ideias antes de montar fisicamente. É uma forma de explorar eletrônica, microcontroladores e automação, combinando hardware e software para criar soluções inovadoras e entender o funcionamento de sistemas embarcados.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-images">
+                    <div class="hobby-image active" data-image="cad">🏠</div>
+                    <div class="hobby-image" data-image="woodwork">🪚</div>
+                    <div class="hobby-image" data-image="vector">✏️</div>
+                    <div class="hobby-image" data-image="circuit">⚡</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
             <div class="contact">
                 <h2>Vamos Trabalhar <span class="gradient-text">Juntos?</span></h2>
                 <p>Estou disponível para novos projetos e oportunidades. Entre em contato!</p>
-                <a href="mailto:lueduardo2001@hotmail.com.br" class="btn btn-primary">Enviar Mensagem</a>
+                <a href="mailto:contato@email.com" class="btn btn-primary">Enviar Mensagem</a>
                 <div class="social-links">
                     <a href="#" title="GitHub">⚡</a>
                     <a href="#" title="LinkedIn">💼</a>
@@ -136,5 +179,7 @@
     <footer>
         <p>&copy; 2024 Full-Stack Developer. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
