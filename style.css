@@ -35,6 +35,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    gap: 20px;
 }
 
 .logo {
@@ -49,6 +50,35 @@ nav {
     display: flex;
     gap: 30px;
     list-style: none;
+}
+
+.lang-switch {
+    display: flex;
+    gap: 8px;
+    align-items: right;
+}
+
+.lang-btn {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(5, 242, 108, 0.4);
+    background: rgba(5, 242, 108, 0.08);
+    color: #f0f0f0;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover {
+    background: rgba(5, 242, 108, 0.2);
+    color: #05F26C;
+}
+
+.lang-btn.active {
+    background: linear-gradient(45deg, #05F26C, #03A64A);
+    color: #132426;
+    box-shadow: 0 6px 18px rgba(5, 242, 108, 0.25);
 }
 
 .nav-links a {
@@ -185,7 +215,7 @@ nav {
 }
 
 .skill-card {
-    background: rgba(5, 242, 108, 0.08);
+    background: rgba(19, 36, 38, 0.95);
     padding: 30px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
@@ -218,9 +248,10 @@ nav {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
     gap: 25px;
     margin-top: 30px;
+    justify-content: center;
 }
 
 .project-card {
@@ -284,6 +315,95 @@ nav {
     border: 1px solid rgba(5, 242, 108, 0.3);
 }
 
+.hobbies-section {
+    display: grid;
+    grid-template-columns: 200px 1fr 400px;
+    gap: 40px;
+    align-items: stretch;
+    background: rgba(5, 242, 108, 0.08);
+    padding: 0px;
+    border-radius: 20px;
+    border: 1px solid rgba(5, 242, 108, 0.15);
+    min-height: 400px;
+}
+
+.hobby-buttons {    
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+    background: rgba(19, 36, 38, 0.95);
+    border-radius: 19px;
+    padding: 20px 0px;
+}
+
+.hobby-btn {
+    padding: 15px 20px;
+    background: rgba(5, 242, 108, 0);
+    border: 0px solid rgba(5, 242, 108, 0.2);
+    border-radius: 0px;
+    color: #c0c0c0;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hobby-btn:hover, .hobby-btn.active {
+    background: rgba(5, 242, 108, 0.2);
+    border-color: #05F26C;
+    color: #05F26C;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 0px rgba(5, 242, 108, 0.2);
+}
+
+.hobby-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hobby-description {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.hobby-description.active {
+    display: block;
+}
+
+.hobby-description h3 {
+    font-size: 28px;
+    color: #05F26C;
+    margin-bottom: 20px;
+}
+
+.hobby-description p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.hobby-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #03A64A 0%, #0A5926 100%);
+    border-radius: 19px;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    border-left: 1px solid rgba(5, 242, 108, 0.2);
+    animation: fadeIn 0.5s;
+    margin: -1px -1px -1px 0;
+}
+
+.hobby-image.active {
+    display: flex;
+}
+
 .contact {
     text-align: center;
     background: rgba(19, 36, 38, 0.95);
@@ -336,96 +456,7 @@ nav {
 footer {
     text-align: center;
     padding: 30px 0;
-    color: #0A5926;
-}
-
-.hobbies-section {
-    display: grid;
-    grid-template-columns: 200px 1fr 400px;
-    gap: 40px;
-    align-items: stretch;
-    background: rgba(5, 242, 108, 0.08);
-    padding: 0px;
-    border-radius: 20px;
-    border: 1px solid rgba(5, 242, 108, 0.15);
-    min-height: 400px;
-}
-
-.hobby-buttons {    
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0px;
-    background: rgba(19, 36, 38, 0.95);
-    border-radius: 19px 0 0 19px;
-    padding: 20px 0px;
-}
-
-.hobby-btn {
-    padding: 15px 20px;
-    background: rgba(5, 242, 108, 0.1);
-    border: 1px solid rgba(5, 242, 108, 0.2);
-    border-radius: 0px;
-    color: #c0c0c0;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-align: left;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.hobby-btn:hover, .hobby-btn.active {
-    background: rgba(5, 242, 108, 0.2);
-    border-color: #05F26C;
-    color: #05F26C;
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(5, 242, 108, 0.2);
-}
-
-.hobby-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hobby-description {
-    display: none;
-    animation: fadeIn 0.5s;
-}
-
-.hobby-description.active {
-    display: block;
-}
-
-.hobby-description h3 {
-    font-size: 28px;
-    color: #05F26C;
-    margin-bottom: 20px;
-}
-
-.hobby-description p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #e0e0e0;
-}
-
-.hobby-image {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #03A64A 0%, #0A5926 100%);
-    border-radius: 0 19px 19px 0;
-    align-items: center;
-    justify-content: center;
-    font-size: 80px;
-    border-left: 1px solid rgba(5, 242, 108, 0.2);
-    animation: fadeIn 0.5s;
-    margin: -1px -1px -1px 0;
-}
-
-.hobby-image.active {
-    display: flex;
+    color: #03A64A;
 }
 
 @keyframes fadeIn {
@@ -460,7 +491,18 @@ footer {
         font-size: 40px;
     }
     
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .lang-switch {
+        margin-left: auto;
+    }
+
     .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 15px;
     }
     

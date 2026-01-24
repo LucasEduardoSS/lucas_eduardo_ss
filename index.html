@@ -9,12 +9,16 @@
 <body>
     <header>
         <nav>
-            <div class="logo">&lt;/Dev&gt;</div>
+            <div class="logo">&lt;/Dev. Lucas Eduardo&gt;</div>
+            <div class="lang-switch" aria-label="Language switch">
+                <button class="lang-btn" type="button" data-lang="pt-BR">PT-BR</button>
+                <button class="lang-btn" type="button" data-lang="en">EN</button>
+            </div>
             <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#home" data-i18n="nav.home">Início</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -22,11 +26,11 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Desenvolvedor <span class="gradient-text">Full-Stack</span></h1>
-                <p>Especializado em Python e Object Pascal, transformando ideias em soluções digitais robustas e escaláveis. Da infraestrutura ao front-end, construindo experiências completas.</p>
+                <h1 data-i18n-html="hero.title">Desenvolvedor <span class="gradient-text">Full-Stack</span></h1>
+                <p data-i18n="hero.subtitle">Especializado em Python e Object Pascal, transformando ideias em soluções digitais robustas e escaláveis. Da infraestrutura ao front-end, construindo experiências completas.</p>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                    <a href="#contact" class="btn btn-secondary">Entre em Contato</a>
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">Ver Projetos</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta.contact">Entre em Contato</a>
                 </div>
             </div>
         </div>
@@ -34,37 +38,37 @@
 
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Tecnologias & <span class="gradient-text">Habilidades</span></h2>
+            <h2 class="section-title" data-i18n-html="skills.title">Tecnologias & <span class="gradient-text">Habilidades</span></h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">🐍</div>
-                    <h3>Python</h3>
-                    <p>Django, Flask, FastAPI, NumPy, Pandas. Desenvolvimento de APIs robustas e aplicações web escaláveis com foco em performance.</p>
+                    <h3 data-i18n="skills.python.title">Python</h3>
+                    <p data-i18n="skills.python.desc">Django, Flask, FastAPI, NumPy, Pandas. Desenvolvimento de APIs robustas e aplicações web escaláveis com foco em performance.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🔷</div>
-                    <h3>Object Pascal</h3>
-                    <p>Delphi, Lazarus, FireDAC. Experiência em desenvolvimento desktop e sistemas legados com alta performance e confiabilidade.</p>
+                    <h3 data-i18n="skills.pascal.title">Object Pascal</h3>
+                    <p data-i18n="skills.pascal.desc">Delphi, Lazarus, FireDAC. Experiência em desenvolvimento desktop e sistemas legados com alta performance e confiabilidade.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">💾</div>
-                    <h3>Databases</h3>
-                    <p>PostgreSQL, MySQL, MongoDB, Redis. Modelagem de dados, otimização de queries e gestão de bancos relacionais e NoSQL.</p>
+                    <h3 data-i18n="skills.databases.title">Databases</h3>
+                    <p data-i18n="skills.databases.desc">PostgreSQL, MySQL, MongoDB, Redis. Modelagem de dados, otimização de queries e gestão de bancos relacionais e NoSQL.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🎨</div>
-                    <h3>Front-End</h3>
-                    <p>HTML5, CSS3, JavaScript, React. Interfaces modernas e responsivas com foco na experiência do usuário.</p>
+                    <h3 data-i18n="skills.frontend.title">Front-End</h3>
+                    <p data-i18n="skills.frontend.desc">HTML5, CSS3, JavaScript, React. Interfaces modernas e responsivas com foco na experiência do usuário.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">⚙️</div>
-                    <h3>DevOps</h3>
-                    <p>Docker, Git, CI/CD, Linux. Automação de deploy, containerização e gestão de infraestrutura.</p>
+                    <h3 data-i18n="skills.devops.title">DevOps</h3>
+                    <p data-i18n="skills.devops.desc">Docker, Git, CI/CD, Linux. Automação de deploy, containerização e gestão de infraestrutura.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🔐</div>
-                    <h3>APIs & Security</h3>
-                    <p>REST, GraphQL, OAuth, JWT. Desenvolvimento seguro com autenticação e autorização robustas.</p>
+                    <h3 data-i18n="skills.security.title">APIs & Security</h3>
+                    <p data-i18n="skills.security.desc">REST, GraphQL, OAuth, JWT. Desenvolvimento seguro com autenticação e autorização robustas.</p>
                 </div>
             </div>
         </div>
@@ -72,13 +76,13 @@
 
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Projetos em <span class="gradient-text">Destaque</span></h2>
+            <h2 class="section-title" data-i18n-html="projects.title">Projetos em <span class="gradient-text">Destaque</span></h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">🚀</div>
                     <div class="project-content">
-                        <h3>Sistema ERP Completo</h3>
-                        <p>Plataforma empresarial desenvolvida em Python (Django) com integração desktop em Delphi para processos críticos.</p>
+                        <h3 data-i18n="projects.erp.title">Sistema ERP Completo</h3>
+                        <p data-i18n="projects.erp.desc">Plataforma empresarial desenvolvida em Python (Django) com integração desktop em Delphi para processos críticos.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Django</span>
@@ -87,11 +91,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" style="display: none;">
                     <div class="project-image">📊</div>
                     <div class="project-content">
-                        <h3>Dashboard Analytics</h3>
-                        <p>Sistema de análise de dados em tempo real com visualizações interativas e processamento de grandes volumes.</p>
+                        <h3 data-i18n="projects.analytics.title">Dashboard Analytics</h3>
+                        <p data-i18n="projects.analytics.desc">Sistema de análise de dados em tempo real com visualizações interativas e processamento de grandes volumes.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">FastAPI</span>
@@ -100,11 +104,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" style="display: none;">
                     <div class="project-image">🏪</div>
                     <div class="project-content">
-                        <h3>PDV Inteligente</h3>
-                        <p>Sistema de ponto de venda desktop com sincronização cloud, desenvolvido em Object Pascal com backend Python.</p>
+                        <h3 data-i18n="projects.pos.title">PDV Inteligente</h3>
+                        <p data-i18n="projects.pos.desc">Sistema de ponto de venda desktop com sincronização cloud, desenvolvido em Object Pascal com backend Python.</p>
                         <div class="project-tags">
                             <span class="tag">Delphi</span>
                             <span class="tag">Python</span>
@@ -119,34 +123,34 @@
 
     <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">Hobbies & <span class="gradient-text">Interesses</span></h2>
+            <h2 class="section-title" data-i18n-html="hobbies.title">Hobbies & <span class="gradient-text">Interesses</span></h2>
             <div class="hobbies-section">
                 <div class="hobby-buttons">
-                    <button class="hobby-btn active" data-hobby="cad">CAD & BIM</button>
-                    <button class="hobby-btn" data-hobby="woodwork">Marcenaria CNC</button>
-                    <button class="hobby-btn" data-hobby="vector">Design Vetorial</button>
-                    <button class="hobby-btn" data-hobby="circuit">Circuitos</button>
+                    <button class="hobby-btn" data-hobby="cad" data-i18n="hobbies.buttons.cad">CAD & BIM</button>
+                    <button class="hobby-btn" data-hobby="woodwork" data-i18n="hobbies.buttons.woodwork">Marcenaria CNC</button>
+                    <button class="hobby-btn" data-hobby="vector" data-i18n="hobbies.buttons.vector">Design Vetorial</button>
+                    <button class="hobby-btn" data-hobby="circuit" data-i18n="hobbies.buttons.circuit">Circuitos</button>
                 </div>
 
                 <div class="hobby-content">
                     <div class="hobby-description active" data-content="cad">
-                        <h3>Projetos CAD & BIM</h3>
-                        <p>Desenvolvo projetos arquitetônicos utilizando softwares de CAD e BIM, criando modelos 3D detalhados de casas e construções. Essa paixão combina criatividade com precisão técnica, permitindo visualizar e planejar cada detalhe antes da execução, desde a estrutura até os acabamentos finais.</p>
+                        <h3 data-i18n="hobbies.cad.title">Projetos CAD & BIM</h3>
+                        <p data-i18n="hobbies.cad.desc">Desenvolvo projetos arquitetônicos utilizando softwares de CAD e BIM, criando modelos 3D detalhados de casas e construções. Essa paixão combina criatividade com precisão técnica, permitindo visualizar e planejar cada detalhe antes da execução, desde a estrutura até os acabamentos finais.</p>
                     </div>
 
                     <div class="hobby-description" data-content="woodwork">
-                        <h3>Marcenaria com CNC</h3>
-                        <p>Projeto e executo peças de marcenaria utilizando máquinas router e CNC Fabex. Do design digital à produção física, transformo ideias em móveis e objetos de madeira com precisão milimétrica. É fascinante ver como a programação e a carpintaria se unem para criar peças únicas.</p>
+                        <h3 data-i18n="hobbies.woodwork.title">Marcenaria com CNC</h3>
+                        <p data-i18n="hobbies.woodwork.desc">Projeto e executo peças de marcenaria utilizando máquinas router e CNC Fabex. Do design digital à produção física, transformo ideias em móveis e objetos de madeira com precisão milimétrica. É fascinante ver como a programação e a carpintaria se unem para criar peças únicas.</p>
                     </div>
 
                     <div class="hobby-description" data-content="vector">
-                        <h3>Ilustração Vetorial</h3>
-                        <p>Crio ilustrações e designs vetoriais usando o Inkscape, desde logos até ilustrações complexas. A arte vetorial permite escalabilidade infinita e precisão matemática, perfeita para projetos que exigem versatilidade e qualidade profissional em qualquer tamanho.</p>
+                        <h3 data-i18n="hobbies.vector.title">Ilustração Vetorial</h3>
+                        <p data-i18n="hobbies.vector.desc">Crio ilustrações e designs vetoriais usando o Inkscape, desde logos até ilustrações complexas. A arte vetorial permite escalabilidade infinita e precisão matemática, perfeita para projetos que exigem versatilidade e qualidade profissional em qualquer tamanho.</p>
                     </div>
 
                     <div class="hobby-description" data-content="circuit">
-                        <h3>Simulação de Circuitos</h3>
-                        <p>Projeto e simulo circuitos eletrônicos com o SimulIDE, testando ideias antes de montar fisicamente. É uma forma de explorar eletrônica, microcontroladores e automação, combinando hardware e software para criar soluções inovadoras e entender o funcionamento de sistemas embarcados.</p>
+                        <h3 data-i18n="hobbies.circuit.title">Simulação de Circuitos</h3>
+                        <p data-i18n="hobbies.circuit.desc">Projeto e simulo circuitos eletrônicos com o SimulIDE, testando ideias antes de montar fisicamente. É uma forma de explorar eletrônica, microcontroladores e automação, combinando hardware e software para criar soluções inovadoras e entender o funcionamento de sistemas embarcados.</p>
                     </div>
                 </div>
 
@@ -163,9 +167,9 @@
     <section class="section">
         <div class="container">
             <div class="contact">
-                <h2>Vamos Trabalhar <span class="gradient-text">Juntos?</span></h2>
-                <p>Estou disponível para novos projetos e oportunidades. Entre em contato!</p>
-                <a href="mailto:contato@email.com" class="btn btn-primary">Enviar Mensagem</a>
+                <h2 data-i18n-html="contact.title">Vamos Trabalhar <span class="gradient-text">Juntos?</span></h2>
+                <p data-i18n="contact.subtitle">Estou disponível para novos projetos e oportunidades. Entre em contato!</p>
+                <a href="mailto:contato@email.com" class="btn btn-primary" data-i18n="contact.cta">Enviar Mensagem</a>
                 <div class="social-links">
                     <a href="#" title="GitHub">⚡</a>
                     <a href="#" title="LinkedIn">💼</a>
@@ -177,7 +181,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Full-Stack Developer. Todos os direitos reservados.</p>
+        <p data-i18n="footer.copy">&copy; 2024 Full-Stack Developer. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
