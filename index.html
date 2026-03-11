@@ -1,189 +1,346 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Horizontal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Portfólio - Full-Stack Developer</title>
+
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">&lt;/Dev. Lucas Eduardo&gt;</div>
-            <div class="lang-switch" aria-label="Language switch">
-                <button class="lang-btn" type="button" data-lang="pt-BR">PT-BR</button>
-                <button class="lang-btn" type="button" data-lang="en">EN</button>
-            </div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
             <ul class="nav-links">
-                <li><a href="#home" data-i18n="nav.home">Início</a></li>
-                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
-                <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
+                <li><a href="#home" class="nav-link active" data-section="0">Início</a></li>
+                <li><a href="#sobre" class="nav-link" data-section="1">Sobre</a></li>
+                <li><a href="#projetos" class="nav-link" data-section="2">Projetos</a></li>
+                <li><a href="#competencias" class="nav-link" data-section="3">Competências</a></li>
+                <li><a href="#contato" class="nav-link" data-section="4">Contato</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 data-i18n-html="hero.title">Desenvolvedor <span class="gradient-text">Full-Stack</span></h1>
-                <p data-i18n="hero.subtitle">Especializado em Python e Object Pascal, transformando ideias em soluções digitais robustas e escaláveis. Da infraestrutura ao front-end, construindo experiências completas.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">Ver Projetos</a>
-                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta.contact">Entre em Contato</a>
+    <div class="sections-container">
+        <!-- Home -->
+        <section id="home" class="active">
+            <div class="section-content">
+                <h1 class="hero-title">Transformando ideias em experiências digitais</h1>
+                <p class="hero-subtitle">Designer & Desenvolvedor criativo especializado em interfaces modernas e impactantes</p>
+                <a href="#projetos" class="cta-button">Ver Projetos</a>
+            </div>
+            <div class="navigation-hint">
+                <span class="hint-text">Use as teclas</span>
+                <div class="hint-keys">
+                    <span class="key">←</span>
+                    <span class="key">→</span>
+                </div>
+                <span class="hint-text">para navegar</span>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre">
+            <div class="section-content">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>Sobre Mim</h2>
+                        <p>Sou um profissional apaixonado por criar experiências digitais únicas que combinam estética impecável com funcionalidade intuitiva.</p>
+                        <p>Com anos de experiência em design e desenvolvimento, transformo conceitos em realidade através de código limpo e design pensado.</p>
+                        <p>Cada projeto é uma oportunidade de superar expectativas e entregar soluções que fazem a diferença.</p>
+                    </div>
+                    <div class="about-visual">
+                        <div class="visual-box"></div>
+                        <div class="visual-box"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title" data-i18n-html="skills.title">Tecnologias & <span class="gradient-text">Habilidades</span></h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🐍</div>
-                    <h3 data-i18n="skills.python.title">Python</h3>
-                    <p data-i18n="skills.python.desc">Django, Flask, FastAPI, NumPy, Pandas. Desenvolvimento de APIs robustas e aplicações web escaláveis com foco em performance.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔷</div>
-                    <h3 data-i18n="skills.pascal.title">Object Pascal</h3>
-                    <p data-i18n="skills.pascal.desc">Delphi, Lazarus, FireDAC. Experiência em desenvolvimento desktop e sistemas legados com alta performance e confiabilidade.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">💾</div>
-                    <h3 data-i18n="skills.databases.title">Databases</h3>
-                    <p data-i18n="skills.databases.desc">PostgreSQL, MySQL, MongoDB, Redis. Modelagem de dados, otimização de queries e gestão de bancos relacionais e NoSQL.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3 data-i18n="skills.frontend.title">Front-End</h3>
-                    <p data-i18n="skills.frontend.desc">HTML5, CSS3, JavaScript, React. Interfaces modernas e responsivas com foco na experiência do usuário.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3 data-i18n="skills.devops.title">DevOps</h3>
-                    <p data-i18n="skills.devops.desc">Docker, Git, CI/CD, Linux. Automação de deploy, containerização e gestão de infraestrutura.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔐</div>
-                    <h3 data-i18n="skills.security.title">APIs & Security</h3>
-                    <p data-i18n="skills.security.desc">REST, GraphQL, OAuth, JWT. Desenvolvimento seguro com autenticação e autorização robustas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Projetos -->
+        <section id="projetos">
+            <div class="section-content">
+                <div class="projects-hierarchy">
+                    <!-- Root Level: Projects Overview -->
+                    <div class="hierarchy-level active" data-level="root">
+                        <div class="projects-overview">
+                            <h2 class="projects-title">Projetos em Destaque</h2>
+                            <div class="projects-grid">
+                                <div class="project-card" data-project-id="0">
+                                    <div class="project-number">01</div>
+                                    <h3 class="project-title">E-commerce Platform</h3>
+                                    <p class="project-description">Plataforma completa de vendas online com sistema de pagamentos integrado e gestão de inventário.</p>
+                                    <button class="project-view-more">
+                                        <span>Ver mais detalhes</span>
+                                        <span class="emoji">👆</span>
+                                    </button>
+                                </div>
+                                <div class="project-card" data-project-id="1">
+                                    <div class="project-number">02</div>
+                                    <h3 class="project-title">Dashboard Analytics</h3>
+                                    <p class="project-description">Interface intuitiva para visualização de dados em tempo real com gráficos interativos.</p>
+                                    <button class="project-view-more">
+                                        <span>Ver mais detalhes</span>
+                                        <span class="emoji">👆</span>
+                                    </button>
+                                </div>
+                                <div class="project-card" data-project-id="2">
+                                    <div class="project-number">03</div>
+                                    <h3 class="project-title">Mobile App Design</h3>
+                                    <p class="project-description">Aplicativo móvel focado em UX com design minimalista e navegação fluida.</p>
+                                    <button class="project-view-more">
+                                        <span>Ver mais detalhes</span>
+                                        <span class="emoji">👆</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title" data-i18n-html="projects.title">Projetos em <span class="gradient-text">Destaque</span></h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">🚀</div>
-                    <div class="project-content">
-                        <h3 data-i18n="projects.erp.title">Sistema ERP Completo</h3>
-                        <p data-i18n="projects.erp.desc">Plataforma empresarial desenvolvida em Python (Django) com integração desktop em Delphi para processos críticos.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Django</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Delphi</span>
+                    <!-- Detail Level: Project 1 -->
+                    <div class="hierarchy-level" data-level="project-0">
+                        <button class="back-button" data-navigate="root">
+                            <span class="arrow">←</span>
+                            <span>Voltar</span>
+                        </button>
+                        <div class="project-detail">
+                            <div class="project-detail-nav" aria-label="Navegação entre projetos">
+                                <button class="detail-nav-btn" data-project-nav="prev" aria-label="Projeto anterior">←</button>
+                                <button class="detail-nav-btn" data-project-nav="next" aria-label="Próximo projeto">→</button>
+                            </div>
+                            <div class="detail-header">
+                                <div class="detail-number">PROJETO 01</div>
+                                <h2 class="detail-title">E-commerce Platform</h2>
+                                <p class="detail-description">
+                                    Uma plataforma completa de vendas online desenvolvida com tecnologias modernas, 
+                                    integrando sistema de pagamentos seguro, gestão de inventário em tempo real e 
+                                    dashboard administrativo intuitivo. Interface responsiva com foco em conversão 
+                                    e experiência do usuário.
+                                </p>
+                            </div>
+                            <div class="detail-info-grid">
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">Cliente</div>
+                                    <div class="detail-info-value">Retail Corp</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">Ano</div>
+                                    <div class="detail-info-value">2024</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">Duração</div>
+                                    <div class="detail-info-value">4 meses</div>
+                                </div>
+                            </div>
+                            <div class="detail-tags">
+                                <span class="detail-tag">React</span>
+                                <span class="detail-tag">Node.js</span>
+                                <span class="detail-tag">PostgreSQL</span>
+                                <span class="detail-tag">Stripe</span>
+                                <span class="detail-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detail Level: Project 2 -->
+                    <div class="hierarchy-level" data-level="project-1">
+                        <button class="back-button" data-navigate="root">
+                            <span class="arrow">←</span>
+                            <span>Voltar</span>
+                        </button>
+                        <div class="project-detail">
+                            <div class="project-detail-nav" aria-label="Navegação entre projetos">
+                                <button class="detail-nav-btn" data-project-nav="prev" aria-label="Projeto anterior">←</button>
+                                <button class="detail-nav-btn" data-project-nav="next" aria-label="Próximo projeto">→</button>
+                            </div>
+                            <div class="detail-header">
+                                <div class="detail-number">PROJETO 02</div>
+                                <h2 class="detail-title">Dashboard Analytics</h2>
+                                <p class="detail-description">
+                                    Interface intuitiva para visualização de dados empresariais em tempo real. 
+                                    Sistema de gráficos interativos, relatórios customizáveis e alertas automáticos. 
+                                    Desenvolvido com foco em performance e escalabilidade para processar grandes 
+                                    volumes de dados.
+                                </p>
+                            </div>
+                            <div class="detail-info-grid">
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">Cliente</div>
+                                    <div class="detail-info-value">Analytics Inc</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">Ano</div>
+                                    <div class="detail-info-value">2024</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">Duração</div>
+                                    <div class="detail-info-value">3 meses</div>
+                                </div>
+                            </div>
+                            <div class="detail-tags">
+                                <span class="detail-tag">Vue.js</span>
+                                <span class="detail-tag">D3.js</span>
+                                <span class="detail-tag">Python</span>
+                                <span class="detail-tag">MongoDB</span>
+                                <span class="detail-tag">WebSocket</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detail Level: Project 3 -->
+                    <div class="hierarchy-level" data-level="project-2">
+                        <button class="back-button" data-navigate="root">
+                            <span class="arrow">←</span>
+                            <span>Voltar</span>
+                        </button>
+                        <div class="project-detail">
+                            <div class="project-detail-nav" aria-label="Navegação entre projetos">
+                                <button class="detail-nav-btn" data-project-nav="prev" aria-label="Projeto anterior">←</button>
+                                <button class="detail-nav-btn" data-project-nav="next" aria-label="Próximo projeto">→</button>
+                            </div>
+                            <div class="detail-header">
+                                <div class="detail-number">PROJETO 03</div>
+                                <h2 class="detail-title">Mobile App Design</h2>
+                                <p class="detail-description">
+                                    Aplicativo móvel com design minimalista e navegação fluida. Sistema de 
+                                    notificações push, sincronização offline e animações nativas suaves. 
+                                    Interface otimizada para iOS e Android com componentes compartilhados e 
+                                    experiência consistente entre plataformas.
+                                </p>
+                            </div>
+                            <div class="detail-info-grid">
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">Cliente</div>
+                                    <div class="detail-info-value">Mobile Solutions</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">Ano</div>
+                                    <div class="detail-info-value">2023</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">Duração</div>
+                                    <div class="detail-info-value">5 meses</div>
+                                </div>
+                            </div>
+                            <div class="detail-tags">
+                                <span class="detail-tag">React Native</span>
+                                <span class="detail-tag">TypeScript</span>
+                                <span class="detail-tag">Firebase</span>
+                                <span class="detail-tag">Redux</span>
+                                <span class="detail-tag">Figma</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" style="display: none;">
-                    <div class="project-image">📊</div>
-                    <div class="project-content">
-                        <h3 data-i18n="projects.analytics.title">Dashboard Analytics</h3>
-                        <p data-i18n="projects.analytics.desc">Sistema de análise de dados em tempo real com visualizações interativas e processamento de grandes volumes.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
+            </div>
+        </section>
+
+        <!-- Competências -->
+        <section id="competencias">
+            <div class="section-content">
+                <h2 class="competencias-title">Competências & Certificações</h2>
+                <div class="competencias-grid">
+                    <!-- Habilidades Técnicas -->
+                    <div class="competencia-category" style="grid-column: span 2;">
+                        <div class="category-header">
+                            <div class="category-icon">⚡</div>
+                            <h3 class="category-title">Habilidades Técnicas</h3>
+                        </div>
+                        <div class="skills-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">GraphQL</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Certificações -->
+                    <div class="competencia-category">
+                        <div class="category-header">
+                            <div class="category-icon">🎓</div>
+                            <h3 class="category-title">Certificações</h3>
+                        </div>
+                        <div class="competencia-item">
+                            <div class="item-title">AWS Certified Solutions Architect</div>
+                            <div class="item-institution">Amazon Web Services</div>
+                            <div class="item-date">2024</div>
+                        </div>
+                        <div class="competencia-item">
+                            <div class="item-title">Google UX Design Professional</div>
+                            <div class="item-institution">Google - Coursera</div>
+                            <div class="item-date">2023</div>
+                        </div>
+                        <div class="competencia-item">
+                            <div class="item-title">Meta Front-End Developer</div>
+                            <div class="item-institution">Meta - Coursera</div>
+                            <div class="item-date">2023</div>
+                        </div>
+                    </div>
+
+                    <!-- Cursos -->
+                    <div class="competencia-category">
+                        <div class="category-header">
+                            <div class="category-icon">📚</div>
+                            <h3 class="category-title">Cursos</h3>
+                        </div>
+                        <div class="competencia-item">
+                            <div class="item-title">Advanced React & Redux</div>
+                            <div class="item-institution">Udemy</div>
+                            <div class="item-date">2024</div>
+                        </div>
+                        <div class="competencia-item">
+                            <div class="item-title">Design System Architecture</div>
+                            <div class="item-institution">Designcode.io</div>
+                            <div class="item-date">2024</div>
+                        </div>
+                        <div class="competencia-item">
+                            <div class="item-title">Node.js Microservices</div>
+                            <div class="item-institution">Pluralsight</div>
+                            <div class="item-date">2023</div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" style="display: none;">
-                    <div class="project-image">🏪</div>
-                    <div class="project-content">
-                        <h3 data-i18n="projects.pos.title">PDV Inteligente</h3>
-                        <p data-i18n="projects.pos.desc">Sistema de ponto de venda desktop com sincronização cloud, desenvolvido em Object Pascal com backend Python.</p>
-                        <div class="project-tags">
-                            <span class="tag">Delphi</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">REST API</span>
-                            <span class="tag">MySQL</span>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato">
+            <div class="section-content">
+                <div class="contact-container">
+                    <h2 class="contact-title">Vamos Conversar?</h2>
+                    <p class="contact-text">Estou sempre aberto a novos projetos e oportunidades de colaboração. Entre em contato e vamos criar algo incrível juntos!</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96f5f9f8e2f7e2f9d6f3eef7fbe6faf3b8f5f9fb">[email&#160;protected]</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Telefone</span>
+                            <span class="contact-value">+55 11 99999-9999</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Localização</span>
+                            <span class="contact-value">São Paulo, Brasil</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title" data-i18n-html="hobbies.title">Hobbies & <span class="gradient-text">Interesses</span></h2>
-            <div class="hobbies-section">
-                <div class="hobby-buttons">
-                    <button class="hobby-btn" data-hobby="cad" data-i18n="hobbies.buttons.cad">CAD & BIM</button>
-                    <button class="hobby-btn" data-hobby="woodwork" data-i18n="hobbies.buttons.woodwork">Marcenaria CNC</button>
-                    <button class="hobby-btn" data-hobby="vector" data-i18n="hobbies.buttons.vector">Design Vetorial</button>
-                    <button class="hobby-btn" data-hobby="circuit" data-i18n="hobbies.buttons.circuit">Circuitos</button>
-                </div>
-
-                <div class="hobby-content">
-                    <div class="hobby-description active" data-content="cad">
-                        <h3 data-i18n="hobbies.cad.title">Projetos CAD & BIM</h3>
-                        <p data-i18n="hobbies.cad.desc">Desenvolvo projetos arquitetônicos utilizando softwares de CAD e BIM, criando modelos 3D detalhados de casas e construções. Essa paixão combina criatividade com precisão técnica, permitindo visualizar e planejar cada detalhe antes da execução, desde a estrutura até os acabamentos finais.</p>
-                    </div>
-
-                    <div class="hobby-description" data-content="woodwork">
-                        <h3 data-i18n="hobbies.woodwork.title">Marcenaria com CNC</h3>
-                        <p data-i18n="hobbies.woodwork.desc">Projeto e executo peças de marcenaria utilizando máquinas router e CNC Fabex. Do design digital à produção física, transformo ideias em móveis e objetos de madeira com precisão milimétrica. É fascinante ver como a programação e a carpintaria se unem para criar peças únicas.</p>
-                    </div>
-
-                    <div class="hobby-description" data-content="vector">
-                        <h3 data-i18n="hobbies.vector.title">Ilustração Vetorial</h3>
-                        <p data-i18n="hobbies.vector.desc">Crio ilustrações e designs vetoriais usando o Inkscape, desde logos até ilustrações complexas. A arte vetorial permite escalabilidade infinita e precisão matemática, perfeita para projetos que exigem versatilidade e qualidade profissional em qualquer tamanho.</p>
-                    </div>
-
-                    <div class="hobby-description" data-content="circuit">
-                        <h3 data-i18n="hobbies.circuit.title">Simulação de Circuitos</h3>
-                        <p data-i18n="hobbies.circuit.desc">Projeto e simulo circuitos eletrônicos com o SimulIDE, testando ideias antes de montar fisicamente. É uma forma de explorar eletrônica, microcontroladores e automação, combinando hardware e software para criar soluções inovadoras e entender o funcionamento de sistemas embarcados.</p>
-                    </div>
-                </div>
-
-                <div class="hobby-images">
-                    <div class="hobby-image active" data-image="cad">🏠</div>
-                    <div class="hobby-image" data-image="woodwork">🪚</div>
-                    <div class="hobby-image" data-image="vector">✏️</div>
-                    <div class="hobby-image" data-image="circuit">⚡</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="contact">
-                <h2 data-i18n-html="contact.title">Vamos Trabalhar <span class="gradient-text">Juntos?</span></h2>
-                <p data-i18n="contact.subtitle">Estou disponível para novos projetos e oportunidades. Entre em contato!</p>
-                <a href="mailto:contato@email.com" class="btn btn-primary" data-i18n="contact.cta">Enviar Mensagem</a>
-                <div class="social-links">
-                    <a href="#" title="GitHub">⚡</a>
-                    <a href="#" title="LinkedIn">💼</a>
-                    <a href="#" title="Twitter">🐦</a>
-                    <a href="#" title="Email">📧</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer.copy">&copy; 2024 Full-Stack Developer. Todos os direitos reservados.</p>
-    </footer>
-
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
