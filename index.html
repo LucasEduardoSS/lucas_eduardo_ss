@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
@@ -32,333 +33,6 @@
         }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root {
-            --nav-offset: 86px;
-            --bg-primary: #0f1f37;
-            --bg-secondary: #5f748c;
-            --accent: #26150F;
-        }
-
-        nav {
-            height: var(--nav-offset);
-        }
-
-        .sections-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            padding-top: var(--nav-offset);
-            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
-        }
-
-        .section {
-            min-width: 100vw;
-            height: calc(100vh - var(--nav-offset));
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            position: relative;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-
-        .section-odd {
-            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-        }
-
-        .section-even {
-            background: linear-gradient(225deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-        }
-
-        .section-content {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1), transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
-            position: relative;
-            z-index: 1;
-        }
-
-        section.active .section-content {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        section::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        section::-webkit-scrollbar-track {
-            background: rgba(3, 74, 166, 0.3);
-        }
-
-        section::-webkit-scrollbar-thumb {
-            background: rgba(38, 21, 15, 0.6);
-            border-radius: 4px;
-        }
-
-        section::-webkit-scrollbar-thumb:hover {
-            background: rgba(38, 21, 15, 0.8);
-        }
-
-        #home::before,
-        #competencias::before {
-            content: '';
-            position: fixed;
-            top: var(--nav-offset);
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        #home::before {
-            background:
-                radial-gradient(circle at 20% 50%, rgba(38, 21, 15, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(26, 16, 8, 0.15) 0%, transparent 50%);
-        }
-
-        #competencias::before {
-            background:
-                radial-gradient(circle at 70% 30%, rgba(26, 16, 8, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 30% 70%, rgba(38, 21, 15, 0.15) 0%, transparent 50%);
-        }
-
-        .navigation-hint {
-            opacity: 0;
-            animation: fadeInHint 1s ease forwards 1.5s, floatHint 2s ease-in-out infinite 2.5s;
-        }
-
-        .hint-text {
-            letter-spacing: 0.05em;
-        }
-
-        .key {
-            background: rgba(38, 21, 15, 0.25);
-            border: 1px solid rgba(38, 21, 15, 0.5);
-            box-shadow: 0 2px 8px rgba(38, 21, 15, 0.3);
-            border-radius: 6px;
-            font-family: 'Space Mono', monospace;
-        }
-
-        .visual-box {
-            border: 2px solid var(--accent);
-            border-radius: 20px;
-            transition: all 0.5s ease;
-        }
-
-        section.active .visual-box:nth-child(1) {
-            transform: rotate(5deg) translateY(-10px);
-        }
-
-        section.active .visual-box:nth-child(2) {
-            transform: rotate(-5deg) translateY(10px);
-        }
-
-        .hierarchy-level {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            min-height: 100%;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            transform: translateX(100%);
-        }
-
-        .hierarchy-level.active {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateX(0);
-            position: relative;
-        }
-
-        .hierarchy-level.exiting {
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-
-        .back-button {
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover {
-            transform: translateX(-5px);
-        }
-
-        .back-button .arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .back-button:hover .arrow {
-            transform: translateX(-3px);
-        }
-
-        .project-view-more .emoji {
-            animation: clickPulse 2s ease-in-out infinite;
-        }
-
-        .project-view-more:hover .emoji {
-            animation-duration: 0.6s;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
-        }
-
-        .nav-link.active {
-            color: var(--accent);
-        }
-
-        .nav-link:hover {
-            color: var(--accent);
-        }
-
-        .detail-info-item {
-            text-align: center;
-            padding: 1.25rem;
-            background: rgba(3, 74, 166, 0.35);
-            border-radius: 15px;
-            border: 1px solid rgba(217, 217, 217, 0.15);
-        }
-
-        .detail-info-label {
-            font-size: 0.8rem;
-            color: rgba(217, 217, 217, 0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.5rem;
-        }
-
-        .detail-info-value {
-            font-size: 1.1rem;
-            color: #D9D9D9;
-            font-weight: 700;
-        }
-
-        .detail-tag {
-            background: rgba(38, 21, 15, 0.3);
-            border: 1px solid rgba(38, 21, 15, 0.5);
-            color: #D9D9D9;
-            padding: 0.6rem 1.2rem;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .skills-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-        }
-
-        .skill-tag {
-            background: rgba(38, 21, 15, 0.25);
-            border: 1px solid rgba(38, 21, 15, 0.5);
-            color: #d9d9d9;
-            padding: 0.45rem 1.1rem;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            background: rgba(38, 21, 15, 0.4);
-            border-color: #26150F;
-            transform: scale(1.05);
-        }
-
-        .competencia-item {
-            background: rgba(38, 21, 15, 0.25);
-            border-left: 3px solid #26150F;
-            padding: 1.2rem 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .competencia-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .competencia-item:hover {
-            background: rgba(38, 21, 15, 0.15);
-            border-left-color: #1a1008;
-            transform: translateX(5px);
-        }
-
-        .item-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #D9D9D9;
-            margin-bottom: 0.4rem;
-        }
-
-        .item-institution {
-            font-size: 0.9rem;
-            color: #D9D9D9;
-            margin-bottom: 0.3rem;
-        }
-
-        .item-date {
-            font-size: 0.85rem;
-            color: #BFBFBF;
-            opacity: 0.8;
-        }
-
-        @keyframes fadeInHint {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(10px);
-            }
-
-            to {
-                opacity: 0.7;
-                transform: translateX(-50%) translateY(0);
-            }
-        }
-
-        @keyframes floatHint {
-            0%,
-            100% {
-                transform: translateX(-50%) translateY(0);
-            }
-
-            50% {
-                transform: translateX(-50%) translateY(-8px);
-            }
-        }
-
-        @keyframes clickPulse {
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
-        }
-    </style>
 </head>
 <body class="bg-[#090f1f] text-[#d9d9d9] overflow-x-hidden" style="font-family: 'Space Mono', monospace;">
     <nav class="fixed top-0 left-0 right-0 z-50 border-b border-[rgba(38,21,15,0.5)] bg-[rgba(95,116,144,0.85)] backdrop-blur">
@@ -409,7 +83,7 @@
                         <p class="text-base text-[#bfbfbf] leading-relaxed">Com anos de experiência em design e desenvolvimento, transformo conceitos em realidade através de código limpo e design pensado.</p>
                         <p class="text-base text-[#bfbfbf] leading-relaxed">Cada projeto é uma oportunidade de superar expectativas e entregar soluções que fazem a diferença.</p>
                     </div>
-                    <div class="relative h-[360px] md:h-[400px]">
+                    <div class="relative h-[360px] md:h-[350px]">
                         <div class="visual-box absolute left-0 top-0 h-[200px] w-[200px] bg-[rgba(38,21,15,0.2)]"></div>
                         <div class="visual-box absolute bottom-0 right-0 h-[250px] w-[250px] border-[#1a1008] bg-[rgba(26,16,8,0.2)]"></div>
                     </div>
@@ -435,8 +109,8 @@
                                 </div>
                                 <div class="project-card relative cursor-pointer rounded-[1rem] border border-[rgba(38,21,15,0.4)] bg-[rgba(38, 21, 15, 0.25)] p-8 text-white shadow-[0_0_0_rgba(0,0,0,0)] transition duration-400 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] hover:-translate-y-2 hover:border-[#26150F] hover:shadow-card-heavy" data-project-id="1">
                                     <div class="project-number text-4xl font-black text-[#26150F] opacity-60">02</div>
-                                    <h3 class="project-title text-2xl font-bold mb-2 text-white">Dashboard Analytics</h3>
-                                    <p class="project-description text-[#bfbfbf] leading-relaxed">Interface intuitiva para visualização de dados em tempo real com gráficos interativos.</p>
+                                    <h3 class="project-title text-2xl font-bold mb-2 text-white">Protasker</h3>
+                                    <p class="project-description text-[#bfbfbf] leading-relaxed">Gerenciamento e distribuição de tarefas entre equipes de forma justa e equilibrada automaticamente.</p>
                                     <button class="project-view-more mt-6 inline-flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-white">
                                         <span>Ver mais detalhes</span>
                                         <span class="emoji text-lg">👆</span>
@@ -455,19 +129,20 @@
                         </div>
                     </div>
                     <div class="hierarchy-level" data-level="project-0">
-                        <button class="back-button mb-6 inline-flex items-center gap-3 rounded-xl border border-[rgba(217,217,217,0.2)] bg-[rgba(217,217,217,0.08)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white" data-navigate="root">
+                        <button class="back-button absolute mb-6 inline-flex items-center gap-3 rounded-xl border border-[rgba(217,217,217,0.2)] bg-[rgba(217,217,217,0.08)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white" data-navigate="root">
                             <span class="arrow text-lg">←</span>
                             <span>Voltar</span>
                         </button>
-                        <div class="project-detail mx-auto max-w-[900px] text-white">
-                            <div class="project-detail-nav mb-6 flex items-center justify-between">
-                                <button class="detail-nav-btn flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg font-mono text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="prev" aria-label="Projeto anterior">←</button>
-                                <button class="detail-nav-btn flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg font-mono text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="next" aria-label="Próximo projeto">→</button>
-                            </div>
+                        <div class="project-detail-nav absolute top-[250px] mb-6 w-full">
+                            <button class="detail-nav-btn absolute left-10 h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="prev" aria-label="Projeto anterior">←</button>
+                            <button class="detail-nav-btn absolute right-10 h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="next" aria-label="Próximo projeto">→</button>
+                        </div>
+                        <div class="project-detail inset-x-0 top-0 mx-auto mb-20 max-w-[900px] text-white">                            
                             <div class="detail-header mb-12 text-center space-y-4">
                                 <div class="detail-number text-sm uppercase tracking-[0.3em] text-white/60">PROJETO 01</div>
+                                <div class="detail-visual-box h-[500px] w-full"></div>
                                 <h2 class="detail-title font-display text-4xl font-black text-white">E-commerce Platform</h2>
-                                <p class="detail-description text-base text-[#bfbfbf] leading-relaxed">
+                                <p class="detail-description text-base text-[#bfbfbf] text-left leading-relaxed">
                                     Uma plataforma completa de vendas online desenvolvida com tecnologias modernas, integrando sistema de pagamentos seguro, gestão de inventário em tempo real e dashboard administrativo intuitivo. Interface responsiva com foco em conversão e experiência do usuário.
                                 </p>
                             </div>
@@ -495,59 +170,61 @@
                         </div>
                     </div>
                     <div class="hierarchy-level" data-level="project-1">
-                        <button class="back-button mb-6 inline-flex items-center gap-3 rounded-xl border border-[rgba(217,217,217,0.2)] bg-[rgba(217,217,217,0.08)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white" data-navigate="root">
+                        <button class="back-button absolute mb-6 inline-flex items-center gap-3 rounded-xl border border-[rgba(217,217,217,0.2)] bg-[rgba(217,217,217,0.08)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white" data-navigate="root">
                             <span class="arrow text-lg">←</span>
                             <span>Voltar</span>
                         </button>
-                        <div class="project-detail mx-auto max-w-[900px] text-white">
-                            <div class="project-detail-nav mb-6 flex items-center justify-between">
-                                <button class="detail-nav-btn flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg font-mono text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="prev" aria-label="Projeto anterior">←</button>
-                                <button class="detail-nav-btn flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg font-mono text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="next" aria-label="Próximo projeto">→</button>
-                            </div>
+                        <div class="project-detail-nav absolute top-[250px] mb-6 w-full">
+                            <button class="detail-nav-btn absolute left-10 h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="prev" aria-label="Projeto anterior">←</button>
+                            <button class="detail-nav-btn absolute right-10 h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="next" aria-label="Próximo projeto">→</button>
+                        </div>
+                        <div class="project-detail inset-x-0 top-0 mx-auto max-w-[900px] text-white">
                             <div class="detail-header mb-12 text-center space-y-4">
                                 <div class="detail-number text-sm uppercase tracking-[0.3em] text-white/60">PROJETO 02</div>
-                                <h2 class="detail-title font-display text-4xl font-black text-white">Dashboard Analytics</h2>
-                                <p class="detail-description text-base text-[#bfbfbf] leading-relaxed">
-                                    Interface intuitiva para visualização de dados empresariais em tempo real. Sistema de gráficos interativos, relatórios customizáveis e alertas automáticos. Desenvolvido com foco em performance e escalabilidade para processar grandes volumes de dados.
+                                <div class="detail-visual-box h-auto w-full mb-15 "><img src="images/janela principal.png" alt="protasker-janela-principal"></div>
+                                <h2 class="detail-title font-display text-4xl font-black text-white">Protasker</h2>
+                                <p class="detail-description text-base text-[#bfbfbf] text-left leading-relaxed">
+                                    Gerenciamento e distribuição de tarefas entre equipes de forma justa e equilibrada automaticamente. 
+                                    Possui visualização de registros interativa e detalhada. Visual sucinto e intuitivo, amigável aos olhos.
                                 </p>
                             </div>
                             <div class="detail-info-grid mb-8 grid gap-6 md:grid-cols-3">
                                 <div class="detail-info-item">
                                     <div class="detail-info-label">Cliente</div>
-                                    <div class="detail-info-value">Analytics Inc</div>
+                                    <div class="detail-info-value">Criação Própria</div>
                                 </div>
                                 <div class="detail-info-item">
                                     <div class="detail-info-label">Ano</div>
-                                    <div class="detail-info-value">2024</div>
+                                    <div class="detail-info-value">2025</div>
                                 </div>
                                 <div class="detail-info-item">
                                     <div class="detail-info-label">Duração</div>
-                                    <div class="detail-info-value">3 meses</div>
+                                    <div class="detail-info-value">2 meses</div>
                                 </div>
                             </div>
                             <div class="detail-tags flex flex-wrap justify-center gap-3">
-                                <span class="detail-tag">Vue.js</span>
-                                <span class="detail-tag">D3.js</span>
                                 <span class="detail-tag">Python</span>
-                                <span class="detail-tag">MongoDB</span>
-                                <span class="detail-tag">WebSocket</span>
+                                <span class="detail-tag">CustomTKinter</span>
+                                <span class="detail-tag">PeeWee DB</span>
+                                <span class="detail-tag">PyCharm</span>
                             </div>
                         </div>
                     </div>
                     <div class="hierarchy-level" data-level="project-2">
-                        <button class="back-button mb-6 inline-flex items-center gap-3 rounded-xl border border-[rgba(217,217,217,0.2)] bg-[rgba(217,217,217,0.08)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white" data-navigate="root">
+                        <button class="back-button absolute mb-6 inline-flex items-center gap-3 rounded-xl border border-[rgba(217,217,217,0.2)] bg-[rgba(217,217,217,0.08)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white" data-navigate="root">
                             <span class="arrow text-lg">←</span>
                             <span>Voltar</span>
                         </button>
-                        <div class="project-detail mx-auto max-w-[900px] text-white">
-                            <div class="project-detail-nav mb-6 flex items-center justify-between">
-                                <button class="detail-nav-btn flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg font-mono text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="prev" aria-label="Projeto anterior">←</button>
-                                <button class="detail-nav-btn flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg font-mono text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="next" aria-label="Próximo projeto">→</button>
-                            </div>
+                        <div class="project-detail-nav absolute top-[250px] mb-6 w-full">
+                            <button class="detail-nav-btn absolute left-10 h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="prev" aria-label="Projeto anterior">←</button>
+                            <button class="detail-nav-btn absolute right-10 h-10 w-10 items-center justify-center rounded-full border border-[rgba(217,217,217,0.22)] bg-[rgba(3,74,166,0.22)] text-lg text-[#bfbfbf] transition duration-200 hover:border-[rgba(217,217,217,0.38)] hover:text-white hover:bg-[rgba(3,74,166,0.35)] disabled:opacity-40 disabled:cursor-not-allowed" data-project-nav="next" aria-label="Próximo projeto">→</button>
+                        </div>
+                        <div class="project-detail inset-x-0 top-0 mx-auto max-w-[900px] text-white">
                             <div class="detail-header mb-12 text-center space-y-4">
                                 <div class="detail-number text-sm uppercase tracking-[0.3em] text-white/60">PROJETO 03</div>
+                                <div class="detail-visual-box h-[500px] w-full"></div>
                                 <h2 class="detail-title font-display text-4xl font-black text-white">Mobile App Design</h2>
-                                <p class="detail-description text-base text-[#bfbfbf] leading-relaxed">
+                                <p class="detail-description text-base text-[#bfbfbf] text-left leading-relaxed">
                                     Aplicativo móvel com design minimalista e navegação fluida. Sistema de notificações push, sincronização offline e animações nativas suaves. Interface otimizada para iOS e Android com componentes compartilhados e experiência consistente entre plataformas.
                                 </p>
                             </div>
@@ -589,7 +266,7 @@
                             <div class="category-icon flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#26150F] to-[#1a1008] font-bold">
                                 <span class="material-symbols-outlined text-2xl leading-none text-white">bolt</span>
                             </div>
-                            <h3 class="category-title font-mono text-2xl font-bold text-[#d9d9d9]">Habilidades Técnicas</h3>
+                            <h3 class="category-title font-display text-2xl font-bold text-[#d9d9d9]">Habilidades Técnicas</h3>
                         </div>
                         <div class="skills-tags">
                             <span class="skill-tag">React</span>
@@ -614,7 +291,7 @@
                             <div class="category-icon flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#26150F] to-[#1a1008] font-bold">
                                 <span class="material-symbols-outlined text-2xl leading-none text-white">verified</span>
                             </div>
-                            <h3 class="category-title font-mono text-2xl font-bold text-[#d9d9d9]">Certificações</h3>
+                            <h3 class="category-title font-display text-2xl font-bold text-[#d9d9d9]">Certificações</h3>
                         </div>
                         <div class="competencia-item">
                             <div class="item-title">AWS Certified Solutions Architect</div>
@@ -637,22 +314,22 @@
                             <div class="category-icon flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#26150F] to-[#1a1008] font-bold">
                                 <span class="material-symbols-outlined text-2xl leading-none text-white">school</span>
                             </div>
-                            <h3 class="category-title font-mono text-2xl font-bold text-[#d9d9d9]">Cursos</h3>
+                            <h3 class="category-title font-display text-2xl font-bold text-[#d9d9d9]">Cursos</h3>
                         </div>
                         <div class="competencia-item">
-                            <div class="item-title">Advanced React &amp; Redux</div>
+                            <div class="item-title">Rede de Computadores</div>
+                            <div class="item-institution">Cisco</div>
+                            <div class="item-date">2025</div>
+                        </div>
+                        <div class="competencia-item">
+                            <div class="item-title">Engenharia da Computação</div>
+                            <div class="item-institution">UNINTER</div>
+                            <div class="item-date">2025</div>
+                        </div>
+                        <div class="competencia-item">
+                            <div class="item-title">PIC Microcontroller Programming for Beginners</div>
                             <div class="item-institution">Udemy</div>
-                            <div class="item-date">2024</div>
-                        </div>
-                        <div class="competencia-item">
-                            <div class="item-title">Design System Architecture</div>
-                            <div class="item-institution">Designcode.io</div>
-                            <div class="item-date">2024</div>
-                        </div>
-                        <div class="competencia-item">
-                            <div class="item-title">Node.js Microservices</div>
-                            <div class="item-institution">Pluralsight</div>
-                            <div class="item-date">2023</div>
+                            <div class="item-date">2026</div>
                         </div>
                     </div>
                 </div>
