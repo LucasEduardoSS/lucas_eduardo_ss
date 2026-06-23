@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="three-background.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -40,6 +42,7 @@
             <div class="font-display text-3xl font-black bg-gradient-to-r from-[#222430] via-[#42455b] to-[#2d3143] bg-clip-text text-transparent">
                 Portfolio
             </div>
+            <span class="font-display text-xs font-thin justify-left">Em desenvolvimento</span>
             <ul class="flex gap-8 text-xs uppercase tracking-[0.15em]">
                 <li><a href="#home" data-section="0" class="nav-link relative px-1 text-[#bfbfbf] transition-colors duration-300">Início</a></li>
                 <li><a href="#sobre" data-section="1" class="nav-link relative px-1 text-[#bfbfbf] transition-colors duration-300">Sobre</a></li>
@@ -79,15 +82,28 @@
                 <div class="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
                     <div class="space-y-6">
                         <h2 class="font-display text-4xl font-black text-white md:text-5xl">Sobre Mim</h2>
-                        <p class="text-base text-[#bfbfbf] leading-relaxed">Sou um profissional apaixonado por criar experiências digitais únicas que combinam estética impecável com funcionalidade intuitiva.</p>
-                        <p class="text-base text-[#bfbfbf] leading-relaxed">Com anos de experiência em design e desenvolvimento, transformo conceitos em realidade através de código limpo e design pensado.</p>
+                        <h3 class="font-display text-lg font-semibold text-white">Lucas Eduardo dos Santos de Souza</h3>
+                        <h4 class="font-display text-md font-thin text-white !mt-[5px]">Engenheiro da Computação | Técnico em Edificações</h4>
+                        <p class="text-base text-[#bfbfbf] leading-relaxed">Sou um profissional apaixonado por criar experiências únicas que combinam estética precisa com funcionalidade intuitiva.</p>
+                        <p class="text-base text-[#bfbfbf] leading-relaxed">Com anos de estudo em engenharia e desenvolvimento, transformo conceitos em realidade através de planejamento e estratégia.</p>
                         <p class="text-base text-[#bfbfbf] leading-relaxed">Cada projeto é uma oportunidade de superar expectativas e entregar soluções que fazem a diferença.</p>
+                        <hr>
+                        <div id="missao-visao-valores" class="mt-6">
+                            <h3 class="font-display text-lg font-semibold text-white">Missão:</h3>
+                            <p class="text-base text-[#bfbfbf] leading-relaxed">Criar soluções precisas, escaláveis e resiliêntes.</p>
+                            <h3 class="font-display text-lg font-semibold text-white mt-2">Visão:</h3>
+                            <p class="text-base text-[#bfbfbf] leading-relaxed">Consolidar como agente inspirador de futuras gerações.</p>
+                            <h3 class="font-display text-lg font-semibold text-white mt-2">Valores:</h3>
+                            <p class="text-base text-[#bfbfbf] leading-relaxed">Precisão, disciplina, capricho, agilidade e responsabilidade.</p>
+                        </div>
+                        <!-- <hr class="!mb-10"> -->
                     </div>
                     <div class="relative h-[360px] md:h-[350px]">
-                        <div class="visual-box absolute left-0 top-0 h-[200px] w-[200px] bg-[rgba(38,21,15,0.2)]"></div>
+                        <div class="visual-box absolute left-0 top-0 h-[200px] w-[200px] bg-[rgba(38,21,15,0.2)] mt-6"></div>
                         <div class="visual-box absolute bottom-0 right-0 h-[250px] w-[250px] border-[#1a1008] bg-[rgba(26,16,8,0.2)]"></div>
                     </div>
                 </div>
+                <a href="#competencias" data-section="3" class="text-right"><h3>Minhas competências -></h3></a>
             </div>
         </section>
 
@@ -100,8 +116,9 @@
                             <div class="projects-grid grid gap-8 md:grid-cols-3">
                                 <div class="project-card relative cursor-pointer rounded-[1rem] border border-[rgba(38,21,15,0.4)] bg-[rgba(38, 21, 15, 0.25)] p-8 text-white shadow-[0_0_0_rgba(0,0,0,0)] transition duration-400 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] hover:-translate-y-2 hover:border-[#26150F] hover:shadow-card-heavy" data-project-id="0">
                                     <div class="project-number text-4xl font-black text-[#26150F] opacity-60">01</div>
-                                    <h3 class="project-title text-2xl font-bold mb-2 text-white">E-commerce Platform</h3>
-                                    <p class="project-description text-[#bfbfbf] leading-relaxed">Plataforma completa de vendas online com sistema de pagamentos integrado e gestão de inventário.</p>
+                                    <h3 class="project-title text-2xl font-bold text-white">NightReaper</h3>
+                                    <small>Em desenvolvimento</small>
+                                    <p class="project-description text-[#bfbfbf] leading-relaxed mt-2">Jogue como um ceifador de espiritos malignos em um mundo 2D.</p>
                                     <button class="project-view-more mt-6 inline-flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-white">
                                         <span>Ver mais detalhes</span>
                                         <span class="emoji text-lg">👆</span>
@@ -109,8 +126,9 @@
                                 </div>
                                 <div class="project-card relative cursor-pointer rounded-[1rem] border border-[rgba(38,21,15,0.4)] bg-[rgba(38, 21, 15, 0.25)] p-8 text-white shadow-[0_0_0_rgba(0,0,0,0)] transition duration-400 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] hover:-translate-y-2 hover:border-[#26150F] hover:shadow-card-heavy" data-project-id="1">
                                     <div class="project-number text-4xl font-black text-[#26150F] opacity-60">02</div>
-                                    <h3 class="project-title text-2xl font-bold mb-2 text-white">Protasker</h3>
-                                    <p class="project-description text-[#bfbfbf] leading-relaxed">Gerenciamento e distribuição de tarefas entre equipes de forma justa e equilibrada automaticamente.</p>
+                                    <h3 class="project-title text-2xl font-bold text-white">Protasker</h3>
+                                    <small>v1.0 - 2025/10</small>
+                                    <p class="project-description text-[#bfbfbf] leading-relaxed mt-2">Gerenciamento e distribuição de tarefas entre equipes de forma justa e equilibrada automaticamente.</p>
                                     <button class="project-view-more mt-6 inline-flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-white">
                                         <span>Ver mais detalhes</span>
                                         <span class="emoji text-lg">👆</span>
@@ -118,8 +136,9 @@
                                 </div>
                                 <div class="project-card relative cursor-pointer rounded-[1rem] border border-[rgba(38,21,15,0.4)] bg-[rgba(38, 21, 15, 0.25)] p-8 text-white shadow-[0_0_0_rgba(0,0,0,0)] transition duration-400 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] hover:-translate-y-2 hover:border-[#26150F] hover:shadow-card-heavy" data-project-id="2">
                                     <div class="project-number text-4xl font-black text-[#26150F] opacity-60">03</div>
-                                    <h3 class="project-title text-2xl font-bold mb-2 text-white">Mobile App Design</h3>
-                                    <p class="project-description text-[#bfbfbf] leading-relaxed">Aplicativo móvel focado em UX com design minimalista e navegação fluida.</p>
+                                    <h3 class="project-title text-2xl font-bold text-white">DIP</h3>
+                                    <small>Em desenvolvimento</small>
+                                    <p class="project-description text-[#bfbfbf] leading-relaxed mt-2">Ferramenta para dimensionamento de instalações prediais.</p>
                                     <button class="project-view-more mt-6 inline-flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-white">
                                         <span>Ver mais detalhes</span>
                                         <span class="emoji text-lg">👆</span>
@@ -261,7 +280,7 @@
                     Competências & Certificações
                 </h2>
                 <div class="competencias-grid grid gap-6 md:grid-cols-2">
-                    <div class="competencia-category col-span-1 rounded-[1.25rem] border border-[rgba(38,21,15,0.3)] bg-[rgba(19,34,68,0.3)] p-7 transition duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-1 hover:border-[#26150F] hover:shadow-[0_15px_35px_rgba(38,21,15,0.3)] md:col-span-2">
+                    <div class="competencia-category col-span-1 rounded-[1.25rem] border border-[rgba(38,21,15,0.3)] bg-[rgba(19,34,68,0)] p-7 transition duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-1 hover:border-[#26150F] hover:shadow-[0_15px_35px_rgba(38,21,15,0.3)] md:col-span-2">
                         <div class="category-header mb-6 flex items-center gap-4">
                             <div class="category-icon flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#26150F] to-[#1a1008] font-bold">
                                 <span class="material-symbols-outlined text-2xl leading-none text-white">bolt</span>
@@ -286,7 +305,7 @@
                             <span class="skill-tag">Tailwind CSS</span>
                         </div>
                     </div>
-                    <div class="competencia-category rounded-[1.25rem] border border-[rgba(38,21,15,0.3)] bg-[rgba(19,34,68,0.3)] p-7 transition duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-1 hover:border-[#26150F] hover:shadow-[0_15px_35px_rgba(38,21,15,0.3)]">
+                    <div class="competencia-category rounded-[1.25rem] border border-[rgba(38,21,15,0.3)] bg-[rgba(19,34,68,0)] p-7 transition duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-1 hover:border-[#26150F] hover:shadow-[0_15px_35px_rgba(38,21,15,0.3)]">
                         <div class="category-header mb-6 flex items-center gap-4">
                             <div class="category-icon flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#26150F] to-[#1a1008] font-bold">
                                 <span class="material-symbols-outlined text-2xl leading-none text-white">verified</span>
@@ -309,7 +328,7 @@
                             <div class="item-date">2023</div>
                         </div>
                     </div>
-                    <div class="competencia-category rounded-[1.25rem] border border-[rgba(38,21,15,0.3)] bg-[rgba(19,34,68,0.3)] p-7 transition duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-1 hover:border-[#26150F] hover:shadow-[0_15px_35px_rgba(38,21,15,0.3)]">
+                    <div class="competencia-category rounded-[1.25rem] border border-[rgba(38,21,15,0.3)] bg-[rgba(19,34,68,0)] p-7 transition duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-1 hover:border-[#26150F] hover:shadow-[0_15px_35px_rgba(38,21,15,0.3)]">
                         <div class="category-header mb-6 flex items-center gap-4">
                             <div class="category-icon flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#26150F] to-[#1a1008] font-bold">
                                 <span class="material-symbols-outlined text-2xl leading-none text-white">school</span>
@@ -347,15 +366,15 @@
                 <div class="contact-info flex flex-wrap justify-center gap-8">
                     <div class="contact-item flex flex-col items-center gap-2">
                         <span class="contact-label text-xs uppercase tracking-[0.2em] text-[#bfbfbf]">Email</span>
-                        <a href="mailto:contato@portfolio.com" class="contact-value text-lg font-bold text-[#26150F]">contato@portfolio.com</a>
+                        <a href="mailto:contato@portfolio.com" class="contact-value text-lg font-bold text-[#BFBFBF]">contato@portfolio.com</a>
                     </div>
                     <div class="contact-item flex flex-col items-center gap-2">
                         <span class="contact-label text-xs uppercase tracking-[0.2em] text-[#bfbfbf]">Telefone</span>
-                        <span class="contact-value text-lg font-bold text-[#26150F]">+55 11 99999-9999</span>
+                        <span class="contact-value text-lg font-bold text-[#BFBFBF]">+55 11 99999-9999</span>
                     </div>
                     <div class="contact-item flex flex-col items-center gap-2">
                         <span class="contact-label text-xs uppercase tracking-[0.2em] text-[#bfbfbf]">Localização</span>
-                        <span class="contact-value text-lg font-bold text-[#26150F]">São Paulo, Brasil</span>
+                        <span class="contact-value text-lg font-bold text-[#BFBFBF]">São Paulo, Brasil</span>
                     </div>
                 </div>
             </div>
@@ -363,5 +382,6 @@
 
     </div>
     <script src="script.js"></script>
+    <script src="three-background.js"></script>
 </body>
 </html>
