@@ -126,13 +126,13 @@ section.active .visual-box:nth-child(2) {
 
 .hierarchy-level {
     position: absolute;
-    top: 0;
+    top: 100;
     left: 0;
     width: 100%;
     min-height: 100%;
     opacity: 0;
     pointer-events: none;
-    /*transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: translateX(100%);
 }
 
@@ -140,7 +140,7 @@ section.active .visual-box:nth-child(2) {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
-    position: relative;
+    /*position: relative;*/
 }
 
 .hierarchy-level.exiting {
